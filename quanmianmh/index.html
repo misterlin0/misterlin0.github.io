@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全免漫画-全免漫画免费阅读指南与热门推荐</title>
+    <meta name="description" content="全免漫画是漫画爱好者的理想选择，这里提供全免漫画阅读指南、分类推荐、阅读技巧与常见问题解答，帮助您畅享全免漫画带来的无限阅读乐趣。">
+    <meta name="keywords" content="全免漫画,免费漫画,漫画阅读,漫画推荐,全免漫画平台">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: #e94560;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #fff;
+            font-weight: 900;
+            box-shadow: 0 4px 12px rgba(233,69,96,0.4);
+        }
+        .logo-text {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        .logo-text span {
+            color: #e94560;
+        }
+        .header-nav {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .header-nav a {
+            color: #ccd6f6;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 4px;
+            transition: color 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .header-nav a:hover {
+            color: #e94560;
+            border-bottom-color: #e94560;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+        .hero-badge strong {
+            color: #f8b500;
+        }
+        /* Content Sections */
+        .section {
+            padding: 50px 0;
+        }
+        .section-title {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #1a1a2e;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: #e94560;
+            border-radius: 4px;
+        }
+        .section-subtitle {
+            color: #607d8b;
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #e94560;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+        }
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        .feature-card p {
+            font-size: 15px;
+            color: #546e7a;
+        }
+        /* Category Cards */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .category-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            cursor: default;
+            border: 2px solid transparent;
+        }
+        .category-card:hover {
+            border-color: #e94560;
+            box-shadow: 0 8px 24px rgba(233,69,96,0.15);
+            transform: scale(1.03);
+        }
+        .category-card .cat-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .category-card h3 {
+            font-size: 18px;
+            color: #1a1a2e;
+        }
+        .category-card .cat-count {
+            font-size: 13px;
+            color: #90a4ae;
+            margin-top: 6px;
+        }
+        /* Steps Section */
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .step-item {
+            flex: 1;
+            min-width: 220px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .step-number {
+            width: 44px;
+            height: 44px;
+            background: #e94560;
+            color: #fff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .step-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .step-item p {
+            font-size: 14px;
+            color: #607d8b;
+        }
+        /* Tips List */
+        .tips-list {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            margin-top: 20px;
+        }
+        .tips-list ul {
+            list-style: none;
+        }
+        .tips-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 16px;
+        }
+        .tips-list li:last-child {
+            border-bottom: none;
+        }
+        .tips-list .tip-icon {
+            color: #e94560;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        /* FAQ */
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-left: 4px solid #e94560;
+            transition: background 0.3s;
+        }
+        .faq-item:hover {
+            background: #fff8f8;
+        }
+        .faq-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #1a1a2e;
+        }
+        .faq-item p {
+            font-size: 15px;
+            color: #546e7a;
+        }
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, #16213e, #1a1a2e);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            margin: 40px 0;
+        }
+        .cta-box h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        .cta-box p {
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: #e94560;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #c73652;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(233,69,96,0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #e94560;
+            color: #fff;
+        }
+        .btn-outline:hover {
+            background: rgba(233,69,96,0.1);
+        }
+        /* Footer */
+        .site-footer {
+            background: #0f1626;
+            color: #8899aa;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-grid h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+        .footer-grid ul {
+            list-style: none;
+        }
+        .footer-grid li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .footer-grid li a {
+            color: #8899aa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-grid li a:hover {
+            color: #e94560;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+            .header-nav {
+                justify-content: center;
+                gap: 16px;
+            }
+            .hero h1 {
+                font-size: 30px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .section {
+                padding: 30px 0;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .steps-container {
+                flex-direction: column;
+            }
+            .cta-box {
+                padding: 24px;
+            }
+            .cta-box h2 {
+                font-size: 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .logo-text {
+                font-size: 22px;
+            }
+            .header-nav {
+                gap: 12px;
+            }
+            .header-nav a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo-area">
+            <div class="logo-icon">漫</div>
+            <div class="logo-text">全免<span>漫画</span></div>
+        </div>
+        <nav>
+            <ul class="header-nav">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#features">阅读优势</a></li>
+                <li><a href="#categories">漫画分类</a></li>
+                <li><a href="#steps">阅读指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="home">
+    <!-- Hero 首屏 -->
+    <section class="hero">
+        <div class="container">
+            <h1>全免漫画</h1>
+            <p>海量漫画免费畅读，涵盖热血、恋爱、悬疑、玄幻等全品类，更新及时，画质高清，让您随时随地享受沉浸式阅读体验。</p>
+            <div class="hero-badge">
+                <strong>全免漫画</strong> · 热门漫画每日更新 · 全站免费阅读
+            </div>
+        </div>
+    </section>
+
+    <!-- 特点介绍 -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择全免漫画</h2>
+            <p class="section-subtitle">真正免费、更新快、体验佳的漫画阅读平台</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>全站免费</h3>
+                    <p>全免漫画坚持全部内容免费阅读，无需充值、无需购买VIP，所有漫画章节向所有读者开放。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>更新及时</h3>
+                    <p>热门作品同步更新，最新章节第一时间推送，让您永远不落后于剧情发展。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>高清画质</h3>
+                    <p>采用高清扫描与优化处理，漫画画面清晰细腻，阅读体验更加舒适。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>多端适配</h3>
+                    <p>支持手机、平板、电脑多设备阅读，页面自适应屏幕，随时随地想看就看。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>智能搜索</h3>
+                    <p>支持按名称、作者、标签精准搜索，快速找到您想看的漫画作品。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>社区互动</h3>
+                    <p>每部漫画都有专属讨论区，读者可以交流心得、分享推荐，发现更多好作品。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 漫画分类 -->
+    <section class="section" id="categories" style="background: #edf1f5;">
+        <div class="container">
+            <h2 class="section-title">全免漫画热门分类</h2>
+            <p class="section-subtitle">无论您喜欢什么类型，全免漫画都能满足您的阅读需求</p>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="cat-icon">🔥</div>
+                    <h3>热血冒险</h3>
+                    <div class="cat-count">少年成长 · 战斗伙伴</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">💕</div>
+                    <h3>恋爱甜宠</h3>
+                    <div class="cat-count">校园恋爱 · 都市情缘</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">🕵️</div>
+                    <h3>悬疑推理</h3>
+                    <div class="cat-count">烧脑谜案 · 层层反转</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">🐉</div>
+                    <h3>玄幻修真</h3>
+                    <div class="cat-count">东方玄幻 · 仙侠世界</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">🤣</div>
+                    <h3>搞笑日常</h3>
+                    <div class="cat-count">轻松解压 · 欢乐不断</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">🌌</div>
+                    <h3>科幻未来</h3>
+                    <div class="cat-count">星际探索 · 科技幻想</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">👻</div>
+                    <h3>灵异鬼怪</h3>
+                    <div class="cat-count">惊悚氛围 · 灵异事件</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">🏀</div>
+                    <h3>运动竞技</h3>
+                    <div class="cat-count">热血赛场 · 青春拼搏</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">🍜</div>
+                    <h3>美食生活</h3>
+                    <div class="cat-count">温暖治愈 · 烟火人生</div>
+                </div>
+                <div class="category-card">
+                    <div class="cat-icon">👑</div>
+                    <h3>古风宫斗</h3>
+                    <div class="cat-count">权谋博弈 · 古韵风情</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 阅读指南 -->
+    <section class="section" id="steps">
+        <div class="container">
+            <h2 class="section-title">全免漫画阅读指南</h2>
+            <p class="section-subtitle">几步即可开启您的免费漫画之旅</p>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>浏览或搜索</h3>
+                    <p>在分类列表中选择感兴趣的题材，或直接输入漫画名称进行快速查找。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>选择作品</h3>
+                    <p>查看漫画简介、评分和读者评论，挑选一部符合口味的好作品。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>点击阅读</h3>
+                    <p>进入漫画详情页，点击章节即可开始阅读，无需任何付费解锁操作。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>收藏追更</h3>
+                    <p>将喜欢的漫画加入书架，开启更新提醒，新章节发布第一时间获知。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 阅读小贴士 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">阅读小贴士</h2>
+            <p class="section-subtitle">这些技巧能让您的全免漫画阅读体验更上一层楼</p>
+            <div class="tips-list">
+                <ul>
+                    <li><span class="tip-icon">✔</span> 善用“阅读历史”功能，跨设备也能同步记录您的阅读进度，再也不怕找不回上次看到哪里。</li>
+                    <li><span class="tip-icon">✔</span> 使用“夜间模式”在暗光环境下阅读，减少屏幕亮度对眼睛的刺激，保护视力。</li>
+                    <li><span class="tip-icon">✔</span> 开启“上下滑动”或“左右翻页”模式，根据个人习惯选择最舒适的翻页方式。</li>
+                    <li><span class="tip-icon">✔</span> 关注作者主页，部分作者会发布番外篇或创作手记，是了解作品背后故事的绝佳途径。</li>
+                    <li><span class="tip-icon">✔</span> 参与评论区讨论，往往能发现资深读者整理的剧情分析和隐藏细节解读。</li>
+                    <li><span class="tip-icon">✔</span> 善用“章节缓存”功能，在没有网络的环境下（如通勤地铁）也能流畅阅读已缓存的漫画。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 区域 -->
+    <section class="container">
+        <div class="cta-box">
+            <h2>立即开启全免漫画阅读之旅</h2>
+            <p>海量佳作免费畅读，精彩世界触手可及</p>
+            <a href="#categories" class="btn">浏览全部漫画</a>
+            <a href="#faq" class="btn btn-outline" style="margin-left: 10px;">阅读帮助</a>
+        </div>
+    </section>
+
+    <!-- FAQ 常见问题 -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">全免漫画常见问题</h2>
+            <p class="section-subtitle">关于全免漫画平台，您可能关心的问题都在这里</p>
+            
+            <div class="faq-item">
+                <h3>全免漫画真的完全免费吗？</h3>
+                <p>是的。全免漫画平台上的所有漫画内容均免费向读者开放，不存在付费章节或隐藏收费项目，您可以放心阅读。</p>
+            </div>
+            <div class="faq-item">
+                <h3>漫画多久更新一次？</h3>
+                <p>不同作品的更新频率有所差异。热门连载漫画通常每周更新数话，部分作品会每日更新。您可以在漫画详情页查看具体的更新时间表，并通过收藏功能获取更新提醒。</p>
+            </div>
+            <div class="faq-item">
+                <h3>可以在手机上看全免漫画吗？</h3>
+                <p>当然可以。全免漫画网页已针对手机、平板等移动设备进行专门适配，无需下载任何应用，通过浏览器直接访问即可获得良好的阅读体验。</p>
+            </div>
+            <div class="faq-item">
+                <h3>如何找到自己喜欢的漫画类型？</h3>
+                <p>您可以通过首页的分类导航浏览各类漫画，也可以使用搜索框输入关键词进行精准查找。此外，平台还会根据热门趋势推荐优质作品，方便您发现新内容。</p>
+            </div>
+            <div class="faq-item">
+                <h3>阅读漫画需要注册账号吗？</h3>
+                <p>浏览和阅读漫画本身无需注册。但如果希望使用收藏、评论、同步阅读进度等个性化功能，建议注册一个免费账号，以便在多设备间同步您的阅读数据。</p>
+            </div>
+            <div class="faq-item">
+                <h3>部分漫画显示“已完结”是什么意思？</h3>
+                <p>“已完结”表示该漫画的故事剧情已经全部连载完毕，所有章节均已上传，您可以一次性完整阅读整部作品，无需等待后续更新。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>全免漫画</h4>
+                <ul>
+                    <li>海量漫画全免费</li>
+                    <li>热门作品及时更</li>
+                    <li>高清画质畅快读</li>
+                </ul>
+            </div>
+            <div>
+                <h4>阅读导航</h4>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#features">阅读优势</a></li>
+                    <li><a href="#categories">漫画分类</a></li>
+                    <li><a href="#steps">阅读指南</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>帮助支持</h4>
+                <ul>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li>意见反馈</li>
+                    <li>用户协议</li>
+                    <li>隐私政策</li>
+                </ul>
+            </div>
+            <div>
+                <h4>关注我们</h4>
+                <ul>
+                    <li>官方微博</li>
+                    <li>微信公众号</li>
+                    <li>读者QQ群</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 全免漫画阅读指南 · 本页面仅为信息展示，所有漫画版权归原作者所有</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
